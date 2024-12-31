@@ -19,7 +19,7 @@ jobs:
       - name: Set executable permissions
         run: chmod +x ${{ github.workspace }}/x86-64/build.sh
 
-      - name: Build ImmortalWrt-x86-64-eif
+      - name: Build ImmortalWrt-23.05.4-x86_64-eif
         run: |
           profiles="${{ github.event.inputs.profile }}"
           
@@ -43,7 +43,7 @@ jobs:
         uses: softprops/action-gh-release@v2.1.0
         with:
           tag_name: Autobuild-x86-64
-          name: ImmortWrt-x86-64-efi
+          name: ImmortWrt-23.05.4-x86_64-efi
           body_path: ${{ github.workspace }}/info.md
           draft: false
           prerelease: false
