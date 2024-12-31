@@ -50,7 +50,7 @@ on:
           ,xunlong_orangepi-r1-plus
           ,xunlong_orangepi-r1-plus-lts  
         required: true
-        default: 'friendlyarm_nanopi-r3s'
+        default: 'lunzn_fastrhino-r66s'
       rootfs_partsize:
         description: '设置软件包大小 单位(MB)'
         required: true
@@ -102,8 +102,8 @@ jobs:
       - name: Upload ImmortWrt as release assets
         uses: softprops/action-gh-release@v2.1.0
         with:
-          tag_name: Autobuild
-          files: ${{ github.workspace }}/bin/targets/rockchip/armv8/*.img.gz
+          tag_name: ImmortalWrt-fastrhino-r66s
+          files: ${{ github.workspace }}/bin/targets/rockchip/armv8/ImmortalWrt-fastrhino-r66s-24.10.0.img.gz
           token: ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
