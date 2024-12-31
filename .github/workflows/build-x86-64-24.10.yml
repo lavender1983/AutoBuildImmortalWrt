@@ -43,7 +43,7 @@ jobs:
         uses: softprops/action-gh-release@v2.1.0
         with:
           tag_name: ImmortalWrt-24.01-x86_64
-          name: ImmortalWrt-24.01-x86_64-eif
+          name: ImmortalWrt-24.01-x86_64-efi
           body_path: ${{ github.workspace }}/info.md
           draft: false
           prerelease: false
