@@ -42,7 +42,7 @@ jobs:
       - name: Create GitHub Release Info
         uses: softprops/action-gh-release@v2.1.0
         with:
-          tag_name: Autobuild-x86-64
+          tag_name: ImmortalWrt-24.01-x86_64
           name: ImmortalWrt-24.01-x86_64-eif
           body_path: ${{ github.workspace }}/info.md
           draft: false
@@ -53,7 +53,7 @@ jobs:
       - name: Upload ImmortWrt as release assets
         uses: softprops/action-gh-release@v2.1.0
         with:
-          tag_name: Autobuild-x86-64
+          tag_name: ImmortalWrt-24.01-x86_64
           files: ${{ github.workspace }}/bin/targets/x86/64/*squashfs-combined-efi.img.gz
           token: ${{ secrets.GITHUB_TOKEN }}
         env:
